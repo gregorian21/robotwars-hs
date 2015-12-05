@@ -18,8 +18,8 @@ turnRobot dir L = pred dir
 turnRobot dir R = succ dir
 
 input = ["5 5", "1 2 N", "LMLMLMLMM", "3 3 E", "MMRMMRMRRM"]
-arena                 = (read (head dimensions) :: Int, read (last dimensions) :: Int)
-                        where dimensions = words (head input)
+arena  = (read (head dimensions) :: Int, read (last dimensions) :: Int)
+         where dimensions = words (head input)
 
 game = parseInput (tail input)
        where parseInput []            = []
